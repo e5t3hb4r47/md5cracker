@@ -7,7 +7,7 @@ def decryption(hash,wordlist):
 			print ("\033[1;31mThis hash is not MD5\033[0m")
 			exit()
 		if not os.path.isfile(wordlist):
-			print ("\003[31mError No Such File \033[0m"+wordlist)
+			print ("\003[1;31mError No Such File \033[0m"+wordlist)
 			sys.exit(2)
 		loop = 1
 		with open(wordlist) as wl:
