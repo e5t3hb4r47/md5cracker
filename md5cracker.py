@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-- coding by Ali Qassem @ANtqAmE --!#
+#!-- coding by Ali Qassem @0xAliQaseem --!#
 import os,sys,hashlib,time
 def decryption(hash,wordlist):
 	try:
@@ -23,7 +23,7 @@ def decryption(hash,wordlist):
 					else:
 						print ("\033[1;31mInvalid"+":"+passwd)
 					loop+=1
-		print ("\033[1;33mCoded by @ANtqAmE\033[0m")
+		print ("\033[1;33mCoded by @0xAliQassem\033[0m")
 	except KeyboardInterrupt as key:
 		print (key)
 		sys.exit(1)
@@ -35,5 +35,5 @@ def decryption(hash,wordlist):
 		sys.exit(1)
 if len(sys.argv) !=3:
 	print ("\033[1;37mUsage : md5cracker.py [hash] [wordlist]")
-	sys.exit("\033[1;33mCoded by @ANtqAmE\033[0m")
+	sys.exit("\033[1;33mCoded by @0xAliQassem\033[0m")
 decryption(sys.argv[1],sys.argv[2])
