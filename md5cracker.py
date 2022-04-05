@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-- coding by Ali Qassem @0xAliQaseem --!#
+#!-- coding by Ali Qassem @e5t3hb4r47 --!#
 import os,sys,hashlib,time
 def decryption(hash,wordlist):
 	try:
@@ -10,7 +10,7 @@ def decryption(hash,wordlist):
 			print ("\003[1;31mError No Such File \033[0m"+wordlist)
 			sys.exit(2)
 		loop = 1
-		with open(wordlist) as wl:
+		with open(wordlist,encoding='latin-1') as wl:
 			for passwd in wl:
 					passwd=passwd.replace("\n","")
 					final=hashlib.md5(passwd.encode()).hexdigest()
@@ -23,7 +23,7 @@ def decryption(hash,wordlist):
 					else:
 						print ("\033[1;31mInvalid"+":"+passwd)
 					loop+=1
-		print ("\033[1;33mCoded by @0xAliQassem\033[0m")
+		print ("\033[1;33mCoded by @e5t3hb4r47\033[0m")
 	except KeyboardInterrupt as key:
 		print (key)
 		sys.exit(1)
@@ -35,5 +35,5 @@ def decryption(hash,wordlist):
 		sys.exit(1)
 if len(sys.argv) !=3:
 	print ("\033[1;37mUsage : md5cracker.py [hash] [wordlist]")
-	sys.exit("\033[1;33mCoded by @0xAliQassem\033[0m")
+	sys.exit("\033[1;33mCoded by @e5t3hb4r47\033[0m")
 decryption(sys.argv[1],sys.argv[2])
