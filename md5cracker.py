@@ -14,14 +14,13 @@ def decryption(hash,wordlist):
 			for passwd in wl:
 					passwd=passwd.replace("\n","")
 					final=hashlib.md5(passwd.encode()).hexdigest()
-					print ("\033[1;37m["+str(loop)+"]"+"\033[1;33m Trying this password : {}".format(passwd))
+					sys.stdout.write("\r\033[1;37m["+str(loop)+"]"+"\033[1;33m Trying this password : {}\033[K".format(passwd))
+					sys.stdout.flush()
 					if final==hash:
 						time.sleep(3)
 						print ("\033[1;32m[+] Decryption Successfully [+]\033[0m")
 						print ("\033[1;33m"+hash+"\033[1;37m:\033[1;36m"+passwd)
 						break
-					else:
-						print ("\033[1;31mInvalid"+":"+passwd)
 					loop+=1
 		print ("\033[1;33mCoded by @e5t3hb4r47\033[0m")
 	except KeyboardInterrupt as key:
